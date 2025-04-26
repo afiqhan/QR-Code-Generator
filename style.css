@@ -1,0 +1,159 @@
+/* Reset asas */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Pusatkan kandungan sepenuhnya */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Kotak utama QR generator */
+.container {
+  padding: 30px 30px 50px 30px; /* tambah padding-bottom */
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Tajuk */
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Input */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* Butang */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Paparan QR */
+#qrcode {
+  margin-top: 20px;
+}
+
+/* Responsif untuk skrin kecil */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  input[type="text"],
+  button {
+    font-size: 14px;
+  }
+}
+
+/* Loader Spinner
+.loader {
+margin: 20px auto;
+border: 6px solid #f3f3f3;
+border-top: 6px solid #007bff;
+border-radius: 50%;
+width: 40px;
+height: 40px;
+animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+} */
+
+
+.loader {
+  margin: 20px auto;
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  white-space: pre;
+  font-size: 30px;
+  line-height: 1.2em;
+  height:1.2em;
+  overflow: hidden;
+}
+.loader:before {
+  content:"Loading...\A⌰oading...\A⌰⍜ading...\A⌰⍜⏃ding...\A⌰⍜⏃⎅ing...\A⌰⍜⏃⎅⟟ng...\A⌰⍜⏃⎅⟟⋏g...\A⌰⍜⏃⎅⟟⋏☌...\A⌰⍜⏃⎅⟟⋏☌⟒..\A⌰⍜⏃⎅⟟⋏☌⟒⏁.\A⌰⍜⏃⎅⟟⋏☌⟒⏁⋔"; 
+  white-space: pre;
+  display: inline-block;
+  animation: l39 1s infinite steps(11) alternate;
+}
+
+@keyframes l39 {
+  100%{transform: translateY(-100%)}
+}
+
+.download-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#downloadBtn {
+  display: inline-block;
+  width: 100px;
+  height: 48px;
+  border-radius: 10%;
+  background-color: #059862;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
+}
+
+#downloadBtn svg {
+  width: 24px;
+  height: 24px;
+  margin-top: 12px;
+}
+
+#downloadBtn.fade-in {
+  animation: fadeInBtn 0.5s ease forwards;
+}
+
+@keyframes fadeInBtn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+  }
+}
+
+#downloadBtn:hover {
+  background-color: #016e46;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QR Code Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>QR Code Generator</h2>
+    <input type="text" id="inputText" placeholder="Masukkan teks atau pautan...">
+    <button onclick="generateQRCode()">Generate</button>
+
+    <!-- Loader animasi -->
+    <div id="loader" class="loader" style="display: none;"></div>
+
+    <!-- Paparan QR Code -->
+    <div id="qrcode"></div>
+
+    <div class="download-wrapper">
+      <a id="downloadBtn" href="#" style="display: none;" title="Muat Turun QR">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+        </svg>
+      </a>
+    </div>
+    
+
+  <script src="script.js"></script>
+</body>
+</html>
